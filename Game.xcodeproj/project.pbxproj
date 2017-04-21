@@ -19,6 +19,8 @@
 		03A39C981E6D98CD00976A85 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A39C971E6D98CD00976A85 /* GameTests.swift */; };
 		03A39CA31E6D98CD00976A85 /* GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A39CA21E6D98CD00976A85 /* GameUITests.swift */; };
 		03AC812E1E9419B1008513FC /* dude1.png in Resources */ = {isa = PBXBuildFile; fileRef = 03AC812D1E9419B1008513FC /* dude1.png */; };
+		03BE0ADE1EA8E48E00988359 /* STR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE0ADD1EA8E48E00988359 /* STR.swift */; };
+		03BE0AE01EA8E4A400988359 /* SNEAK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE0ADF1EA8E4A400988359 /* SNEAK.swift */; };
 		03C13A261E92A270001DFE0E /* goblet.png in Resources */ = {isa = PBXBuildFile; fileRef = 03C13A251E92A270001DFE0E /* goblet.png */; };
 		03D250041E9E6CD50051D778 /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D250031E9E6CD50051D778 /* Dice.swift */; };
 		03D5D6A21E7ACF4300BE7239 /* YesorNo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D5D6A11E7ACF4300BE7239 /* YesorNo.swift */; };
@@ -61,6 +63,8 @@
 		03A39CA21E6D98CD00976A85 /* GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameUITests.swift; sourceTree = "<group>"; };
 		03A39CA41E6D98CD00976A85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03AC812D1E9419B1008513FC /* dude1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dude1.png; sourceTree = "<group>"; };
+		03BE0ADD1EA8E48E00988359 /* STR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STR.swift; sourceTree = "<group>"; };
+		03BE0ADF1EA8E4A400988359 /* SNEAK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNEAK.swift; sourceTree = "<group>"; };
 		03C13A251E92A270001DFE0E /* goblet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goblet.png; sourceTree = "<group>"; };
 		03D250031E9E6CD50051D778 /* Dice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
 		03D5D6A11E7ACF4300BE7239 /* YesorNo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YesorNo.swift; path = ../YesorNo.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 				03D5D6A31E7ACFF400BE7239 /* roll.swift */,
 				03D5D6A11E7ACF4300BE7239 /* YesorNo.swift */,
 				03A39C821E6D98CC00976A85 /* GameScene.swift */,
+				03BE0ADD1EA8E48E00988359 /* STR.swift */,
+				03BE0ADF1EA8E4A400988359 /* SNEAK.swift */,
 				03A39C861E6D98CC00976A85 /* Main.storyboard */,
 				0347E9591E70598D0090F7A3 /* gameboard.png */,
 				03C13A251E92A270001DFE0E /* goblet.png */,
@@ -291,11 +297,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03BE0AE01EA8E4A400988359 /* SNEAK.swift in Sources */,
 				03A39C831E6D98CC00976A85 /* GameScene.swift in Sources */,
 				03D5D6A41E7ACFF400BE7239 /* roll.swift in Sources */,
 				03A39C851E6D98CC00976A85 /* GameViewController.swift in Sources */,
 				03A39C7D1E6D98CC00976A85 /* AppDelegate.swift in Sources */,
 				03D250041E9E6CD50051D778 /* Dice.swift in Sources */,
+				03BE0ADE1EA8E48E00988359 /* STR.swift in Sources */,
 				03D5D6A21E7ACF4300BE7239 /* YesorNo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
