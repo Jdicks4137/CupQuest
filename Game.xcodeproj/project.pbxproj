@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		033EE07F1EAE415900F8526C /* boostCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033EE07E1EAE415900F8526C /* boostCards.swift */; };
+		033EE0811EAE416A00F8526C /* setbackCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033EE0801EAE416A00F8526C /* setbackCards.swift */; };
 		0347E95A1E70598D0090F7A3 /* gameboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 0347E9591E70598D0090F7A3 /* gameboard.png */; };
 		03A39C7D1E6D98CC00976A85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A39C7C1E6D98CC00976A85 /* AppDelegate.swift */; };
 		03A39C7F1E6D98CC00976A85 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 03A39C7E1E6D98CC00976A85 /* GameScene.sks */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		033EE07E1EAE415900F8526C /* boostCards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = boostCards.swift; sourceTree = "<group>"; };
+		033EE0801EAE416A00F8526C /* setbackCards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setbackCards.swift; sourceTree = "<group>"; };
 		0347E9591E70598D0090F7A3 /* gameboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameboard.png; sourceTree = "<group>"; };
 		03A39C791E6D98CC00976A85 /* Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03A39C7C1E6D98CC00976A85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				03A39C7E1E6D98CC00976A85 /* GameScene.sks */,
 				03A39C841E6D98CC00976A85 /* GameViewController.swift */,
 				03D5D6A31E7ACFF400BE7239 /* roll.swift */,
+				033EE07E1EAE415900F8526C /* boostCards.swift */,
+				033EE0801EAE416A00F8526C /* setbackCards.swift */,
 				03D5D6A11E7ACF4300BE7239 /* YesorNo.swift */,
 				03A39C821E6D98CC00976A85 /* GameScene.swift */,
 				03BE0ADD1EA8E48E00988359 /* STR.swift */,
@@ -298,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03BE0AE01EA8E4A400988359 /* SNEAK.swift in Sources */,
+				033EE07F1EAE415900F8526C /* boostCards.swift in Sources */,
 				03A39C831E6D98CC00976A85 /* GameScene.swift in Sources */,
 				03D5D6A41E7ACFF400BE7239 /* roll.swift in Sources */,
 				03A39C851E6D98CC00976A85 /* GameViewController.swift in Sources */,
@@ -305,6 +312,7 @@
 				03D250041E9E6CD50051D778 /* Dice.swift in Sources */,
 				03BE0ADE1EA8E48E00988359 /* STR.swift in Sources */,
 				03D5D6A21E7ACF4300BE7239 /* YesorNo.swift in Sources */,
+				033EE0811EAE416A00F8526C /* setbackCards.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

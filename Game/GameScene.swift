@@ -18,144 +18,154 @@ enum Player:Int {
 let mydie = Dice()
 
 class GameScene: SKScene {
+    // the following variables are all identifying each individual space on the board
     
     var currentSpacePlayer1:String = "Start"
     var rollValue6 = mydie.die6
     var rollValue20 = mydie.die20
     var currentPosition:Int = 0
-    var start1:SKSpriteNode = SKSpriteNode()
-    var player1:SKSpriteNode = SKSpriteNode()
-    var space1:SKSpriteNode = SKSpriteNode()
-    var space2:SKSpriteNode = SKSpriteNode()
-    var space3:SKSpriteNode = SKSpriteNode()
-    var space4:SKSpriteNode = SKSpriteNode()
-    var space5:SKSpriteNode = SKSpriteNode()
-    var space6:SKSpriteNode = SKSpriteNode()
-    var space7:SKSpriteNode = SKSpriteNode()
-    var space8:SKSpriteNode = SKSpriteNode()
-    var space9:SKSpriteNode = SKSpriteNode()
-    var space10:SKSpriteNode = SKSpriteNode()
-    var space11:SKSpriteNode = SKSpriteNode()
-    var space12:SKSpriteNode = SKSpriteNode()
-    var space13:SKSpriteNode = SKSpriteNode()
-    var space14:SKSpriteNode = SKSpriteNode()
-    var space15:SKSpriteNode = SKSpriteNode()
-    var space16:SKSpriteNode = SKSpriteNode()
-    var space17:SKSpriteNode = SKSpriteNode()
-    var space18:SKSpriteNode = SKSpriteNode()
-    var space19:SKSpriteNode = SKSpriteNode()
-    var space20:SKSpriteNode = SKSpriteNode()
-    var space21:SKSpriteNode = SKSpriteNode()
-    var space22:SKSpriteNode = SKSpriteNode()
-    var space23:SKSpriteNode = SKSpriteNode()
-    var space24:SKSpriteNode = SKSpriteNode()
-    var space25:SKSpriteNode = SKSpriteNode()
-    var space26:SKSpriteNode = SKSpriteNode()
-    var space27:SKSpriteNode = SKSpriteNode()
-    var space28:SKSpriteNode = SKSpriteNode()
-    var space29:SKSpriteNode = SKSpriteNode()
-    var space30:SKSpriteNode = SKSpriteNode()
-    var space31:SKSpriteNode = SKSpriteNode()
-    var space32:SKSpriteNode = SKSpriteNode()
-    var space33:SKSpriteNode = SKSpriteNode()
-    var space34:SKSpriteNode = SKSpriteNode()
-    var space35:SKSpriteNode = SKSpriteNode()
-    var space36:SKSpriteNode = SKSpriteNode()
-    var space37:SKSpriteNode = SKSpriteNode()
-    var space38:SKSpriteNode = SKSpriteNode()
-    var space39:SKSpriteNode = SKSpriteNode()
-    var space40:SKSpriteNode = SKSpriteNode()
-    var space41:SKSpriteNode = SKSpriteNode()
-    var space42:SKSpriteNode = SKSpriteNode()
-    var space43:SKSpriteNode = SKSpriteNode()
-    var space44:SKSpriteNode = SKSpriteNode()
-    var space45:SKSpriteNode = SKSpriteNode()
-    var space46:SKSpriteNode = SKSpriteNode()
-    var space47:SKSpriteNode = SKSpriteNode()
-    var space48:SKSpriteNode = SKSpriteNode()
-    var space49:SKSpriteNode = SKSpriteNode()
-    var space50:SKSpriteNode = SKSpriteNode()
-    var space51:SKSpriteNode = SKSpriteNode()
-    var space52:SKSpriteNode = SKSpriteNode()
-    var space53:SKSpriteNode = SKSpriteNode()
-    var space54:SKSpriteNode = SKSpriteNode()
-    var space55:SKSpriteNode = SKSpriteNode()
-    var space56:SKSpriteNode = SKSpriteNode()
-    var space57:SKSpriteNode = SKSpriteNode()
-    var space58:SKSpriteNode = SKSpriteNode()
-    var space59:SKSpriteNode = SKSpriteNode()
-    var space60:SKSpriteNode = SKSpriteNode()
-    var space61:SKSpriteNode = SKSpriteNode()
-    var space62:SKSpriteNode = SKSpriteNode()
-    var space63:SKSpriteNode = SKSpriteNode()
-    var space64:SKSpriteNode = SKSpriteNode()
-    var space65:SKSpriteNode = SKSpriteNode()
-    var space66:SKSpriteNode = SKSpriteNode()
-    var space67:SKSpriteNode = SKSpriteNode()
-    var space68:SKSpriteNode = SKSpriteNode()
-    var space69:SKSpriteNode = SKSpriteNode()
-    var space70:SKSpriteNode = SKSpriteNode()
-    var space71:SKSpriteNode = SKSpriteNode()
-    var space72:SKSpriteNode = SKSpriteNode()
-    var space73:SKSpriteNode = SKSpriteNode()
-    var space74:SKSpriteNode = SKSpriteNode()
-    var space75:SKSpriteNode = SKSpriteNode()
-    var space76:SKSpriteNode = SKSpriteNode()
-    var space77:SKSpriteNode = SKSpriteNode()
-    var space78:SKSpriteNode = SKSpriteNode()
-    var space79:SKSpriteNode = SKSpriteNode()
-    var space80:SKSpriteNode = SKSpriteNode()
-    var space81:SKSpriteNode = SKSpriteNode()
-    var space82:SKSpriteNode = SKSpriteNode()
-    var space83:SKSpriteNode = SKSpriteNode()
-    var space84:SKSpriteNode = SKSpriteNode()
-    var space85:SKSpriteNode = SKSpriteNode()
-    var space86:SKSpriteNode = SKSpriteNode()
-    var space87:SKSpriteNode = SKSpriteNode()
-    var space88:SKSpriteNode = SKSpriteNode()
-    var space89:SKSpriteNode = SKSpriteNode()
-    var space90:SKSpriteNode = SKSpriteNode()
-    var space91:SKSpriteNode = SKSpriteNode()
-    var space92:SKSpriteNode = SKSpriteNode()
-    var space93:SKSpriteNode = SKSpriteNode()
-    var space94:SKSpriteNode = SKSpriteNode()
-    var space95:SKSpriteNode = SKSpriteNode()
-    var space96:SKSpriteNode = SKSpriteNode()
-    var space97:SKSpriteNode = SKSpriteNode()
-    var space98:SKSpriteNode = SKSpriteNode()
-    var space99:SKSpriteNode = SKSpriteNode()
-    var space100:SKSpriteNode = SKSpriteNode()
-    var space101:SKSpriteNode = SKSpriteNode()
-    var space102:SKSpriteNode = SKSpriteNode()
-    var space103:SKSpriteNode = SKSpriteNode()
-    var space104:SKSpriteNode = SKSpriteNode()
-    var space105:SKSpriteNode = SKSpriteNode()
-    var space106:SKSpriteNode = SKSpriteNode()
-    var space107:SKSpriteNode = SKSpriteNode()
-    var space108:SKSpriteNode = SKSpriteNode()
-    var space109:SKSpriteNode = SKSpriteNode()
-    var space110:SKSpriteNode = SKSpriteNode()
-    var space111:SKSpriteNode = SKSpriteNode()
-    var space112:SKSpriteNode = SKSpriteNode()
-    var space113:SKSpriteNode = SKSpriteNode()
-    var space114:SKSpriteNode = SKSpriteNode()
-    var space115:SKSpriteNode = SKSpriteNode()
-    var space116:SKSpriteNode = SKSpriteNode()
-    var space117:SKSpriteNode = SKSpriteNode()
-    var space118:SKSpriteNode = SKSpriteNode()
-    var space119:SKSpriteNode = SKSpriteNode()
-    var space120:SKSpriteNode = SKSpriteNode()
-    var space121:SKSpriteNode = SKSpriteNode()
-    var space122:SKSpriteNode = SKSpriteNode()
-    var space123:SKSpriteNode = SKSpriteNode()
-    var space124:SKSpriteNode = SKSpriteNode()
-    var finish1:SKSpriteNode = SKSpriteNode()
+    var start1:SKSpriteNode?
+    var player1:SKSpriteNode?
+    var space1:SKSpriteNode?
+    var space2:SKSpriteNode?
+    var space3:SKSpriteNode?
+    var space4:SKSpriteNode?
+    var space5:SKSpriteNode?
+    var space6:SKSpriteNode?
+    var space7:SKSpriteNode?
+    var space8:SKSpriteNode?
+    var space9:SKSpriteNode?
+    var space10:SKSpriteNode?
+    var space11:SKSpriteNode?
+    var space12:SKSpriteNode?
+    var space13:SKSpriteNode?
+    var space14:SKSpriteNode?
+    var space15:SKSpriteNode?
+    var space16:SKSpriteNode?
+    var space17:SKSpriteNode?
+    var space18:SKSpriteNode?
+    var space19:SKSpriteNode?
+    var space20:SKSpriteNode?
+    var space21:SKSpriteNode?
+    var space22:SKSpriteNode?
+    var space23:SKSpriteNode?
+    var space24:SKSpriteNode?
+    var space25:SKSpriteNode?
+    var space26:SKSpriteNode?
+    var space27:SKSpriteNode?
+    var space28:SKSpriteNode?
+    var space29:SKSpriteNode?
+    var space30:SKSpriteNode?
+    var space31:SKSpriteNode?
+    var space32:SKSpriteNode?
+    var space33:SKSpriteNode?
+    var space34:SKSpriteNode?
+    var space35:SKSpriteNode?
+    var space36:SKSpriteNode?
+    var space37:SKSpriteNode?
+    var space38:SKSpriteNode?
+    var space39:SKSpriteNode?
+    var space40:SKSpriteNode?
+    var space41:SKSpriteNode?
+    var space42:SKSpriteNode?
+    var space43:SKSpriteNode?
+    var space44:SKSpriteNode?
+    var space45:SKSpriteNode?
+    var space46:SKSpriteNode?
+    var space47:SKSpriteNode?
+    var space48:SKSpriteNode?
+    var space49:SKSpriteNode?
+    var space50:SKSpriteNode?
+    var space51:SKSpriteNode?
+    var space52:SKSpriteNode?
+    var space53:SKSpriteNode?
+    var space54:SKSpriteNode?
+    var space55:SKSpriteNode?
+    var space56:SKSpriteNode?
+    var space57:SKSpriteNode?
+    var space58:SKSpriteNode?
+    var space59:SKSpriteNode?
+    var space60:SKSpriteNode?
+    var space61:SKSpriteNode?
+    var space62:SKSpriteNode?
+    var space63:SKSpriteNode?
+    var space64:SKSpriteNode?
+    var space65:SKSpriteNode?
+    var space66:SKSpriteNode?
+    var space67:SKSpriteNode?
+    var space68:SKSpriteNode?
+    var space69:SKSpriteNode?
+    var space70:SKSpriteNode?
+    var space71:SKSpriteNode?
+    var space72:SKSpriteNode?
+    var space73:SKSpriteNode?
+    var space74:SKSpriteNode?
+    var space75:SKSpriteNode?
+    var space76:SKSpriteNode?
+    var space77:SKSpriteNode?
+    var space78:SKSpriteNode?
+    var space79:SKSpriteNode?
+    var space80:SKSpriteNode?
+    var space81:SKSpriteNode?
+    var space82:SKSpriteNode?
+    var space83:SKSpriteNode?
+    var space84:SKSpriteNode?
+    var space85:SKSpriteNode?
+    var space86:SKSpriteNode?
+    var space87:SKSpriteNode?
+    var space88:SKSpriteNode?
+    var space89:SKSpriteNode?
+    var space90:SKSpriteNode?
+    var space91:SKSpriteNode?
+    var space92:SKSpriteNode?
+    var space93:SKSpriteNode?
+    var space94:SKSpriteNode?
+    var space95:SKSpriteNode?
+    var space96:SKSpriteNode?
+    var space97:SKSpriteNode?
+    var space98:SKSpriteNode?
+    var space99:SKSpriteNode?
+    var space100:SKSpriteNode?
+    var space101:SKSpriteNode?
+    var space102:SKSpriteNode?
+    var space103:SKSpriteNode?
+    var space104:SKSpriteNode?
+    var space105:SKSpriteNode?
+    var space106:SKSpriteNode?
+    var space107:SKSpriteNode?
+    var space108:SKSpriteNode?
+    var space109:SKSpriteNode?
+    var space110:SKSpriteNode?
+    var space111:SKSpriteNode?
+    var space112:SKSpriteNode?
+    var space113:SKSpriteNode?
+    var space114:SKSpriteNode?
+    var space115:SKSpriteNode?
+    var space116:SKSpriteNode?
+    var space117:SKSpriteNode?
+    var space118:SKSpriteNode?
+    var space119:SKSpriteNode?
+    var space120:SKSpriteNode?
+    var space121:SKSpriteNode?
+    var space122:SKSpriteNode?
+    var space123:SKSpriteNode?
+    var space124:SKSpriteNode?
+    var finish1:SKSpriteNode?
+    var spaces: [SKSpriteNode]?
+    var greenSpaces: [SKSpriteNode]?
+    var redSpaces: [SKSpriteNode]?
+    var graySpaces: [SKSpriteNode]?
+    var blueSpaces: [SKSpriteNode]?
+    var orangeSpaces: [SKSpriteNode]?
+    var yellowSpaces: [SKSpriteNode]?
+    
     
     
     override func didMove(to view: SKView) {
         
         for node in children {
             
+            // initiates all the different nodes and allows them to be used
             if node.name == "Player1" {
                 
                 if let someNode:SKSpriteNode = node as? SKSpriteNode {
@@ -1048,22 +1058,37 @@ class GameScene: SKScene {
             
     }
 
+        spaces = [start1!, space1!, space2!, space3!, space4!, space5!, space6!, space7!, space8!, space9!, space10!, space11!, space12!, space13!, space14!, space15!, space16!, space17!, space18!, space19!, space20!, space21!, space22!, space23!, space24!, space25!, space26!, space27!, space28!, space29!, space30!, space31!, space32!, space33!, space34!, space35!, space36!, space37!, space38!, space39!, space40!, space41!, space42!, space43!, space44!, space45!, space46!, space47!, space48!, space49!, space50!, space51!, space52!, space53!, space54!, space55!, space56!, space57!, space58!, space59!, space60!, space61!, space62!, space63!, space64!, space65!, space66!, space67!, space68!, space69!, space70!, space71!, space72!, space73!, space74!, space75!, space76!, space77!, space78!, space79!, space80!, space81!, space82!, space83!, space84!, space85!, space86!, space87!, space88!, space89!, space90!, space91!, space92!, space93!, space94!, space95!, space96!, space97!, space98!, space99!, space100!, space101!, space102!, space103!, space104!, space105!, space106!, space107!, space108!, space109!, space110!, space111!, space112!, space113!, space114!, space115!, space116!, space117!, space118!, space119!, space120!, space121!, space122!, space123!, space124!, finish1!] // list of where player 1 moves to
+        
+        //redSpaces = []
+        //graySpaces = [space3!, space6!, space10!, space15!, space22!, space25!, space31!, space35!, space36!, space38!, space39!, space45!, space47!, space48!, space52!, space59!, space62!, space74!, space75!, space79!, space85!, space89!, space91!, ]
+        blueSpaces = []
+        orangeSpaces = []
+        yellowSpaces = [] // THESE GROUPS ARE FOR LATER
+        
+        let moveToStart = SKAction.move(to: ((start1?.position)!), duration: 0)
+        player1?.run(moveToStart) // moves player to start
+
 }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        var moveToNextSpace: SKAction
+            rollValue6 = mydie.die6! // rolls 1-6 die
+            currentPosition += rollValue6! // move player one the number of spaces on the die
+            if (currentPosition >= (spaces?.count)!) {
+                moveToNextSpace = SKAction.move(to: (spaces?[(spaces?.count)! - 1].position)!, duration: 0.5) // moves player to finish space if the space they are trying to move to is greater than or equal to the finish space
+                currentPosition = (spaces?.count)!
+                print("current position", +currentPosition - 1)
+                print("YOU SHALL NOT PASS!") // this is temporary :D
+            } else {
+                print("you rolled", +rollValue6!) // prints value of die roll
+                print("current space", +currentPosition) // prints which space the player is on
+                moveToNextSpace = SKAction.move(to: (spaces?[currentPosition].position)!, duration: 0.5)
+            }
+            player1?.run(moveToNextSpace) // runs action
         
-        let moveToStart = SKAction.move(to: start1.position, duration: 0)
-        player1.run(moveToStart) // moves player to start
-        rollValue6 = mydie.die6!
-        currentPosition += rollValue6!
-        let moveToNextSpace = SKAction.move(to: spaces[currentPosition].position, duration: 1)
-        player1.run(moveToNextSpace)
-        // rollValue6
-        // move player by amount on rollValue6
-        // wait one second in between rolls
         
     
-        
         
         }
         
