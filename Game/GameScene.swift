@@ -9,11 +9,7 @@
 import SpriteKit
 
 
-enum Player:Int {
-    
-    case Player1 = 1
-    
-}
+
 
 let mydie = Dice()
 
@@ -162,6 +158,9 @@ class GameScene: SKScene {
     
     
     override func didMove(to view: SKView) {
+        
+        let player = Player(strength: 10)
+        
         
         for node in children {
             
@@ -1066,6 +1065,8 @@ class GameScene: SKScene {
         orangeSpaces = [space1!, space2!, space5!, space9!, space14!, space18!, space19!, space26!, space29!, space37!, space46!, space49!, space53!, space60!, space61!, space72!, space83!, space91!, space106!]
         yellowSpaces = [space13!, space21!, space33!, space42!, space55!, space57!, space66!, space80!, space94!, space95!, space99!, space110!, space121!, space122!] // THESE GROUPS ARE FOR LATER
         
+        let colorSpaces = [0, -1, -1, 0, 5, -1, 0, -3, 2, -1, 0, 2, 5, -2, -1, 0, -3, 2, -1, -1, 5, -2, 0, 2, 5, 0, -1, -3, 5, -1, 5, 0, 2, -2, -3, 0, 0, -1, 0, 0, 5, 5, -2, -3, 2, 0, -1, 0, 0, -1, 2, -3, 0, -1, 5, -2, 2, -2, -3, 0, -1, -1, 0, 5, 5, 5, -2, 5, 2, 5, -3, 5, -3, -1, 0, 0, -3, -3, 2, 0, -2, -3, -3, -3, -1, 0, 2, 5, 2, 0, -3, 0, -1, -3, -2, -2, -3, 0, -3, -2, 5, 0, 0, -3, 5, 0, 2, -1, 2, -3, -2, -3, 0, -3, -3, -3, -3, 0, -3, 5, -3, -2, -2, -3, -3, 0]
+        
         let moveToStart = SKAction.move(to: ((start1?.position)!), duration: 0)
         player1?.run(moveToStart) // moves player to start
 
@@ -1084,6 +1085,7 @@ class GameScene: SKScene {
                 print("you rolled", +rollValue6!) // prints value of die roll
                 print("current space", +currentPosition) // prints which space the player is on
                 moveToNextSpace = SKAction.move(to: (spaces?[currentPosition].position)!, duration: 0.5)
+                
             }
             player1?.run(moveToNextSpace) // runs action
         

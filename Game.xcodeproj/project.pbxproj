@@ -27,6 +27,7 @@
 		03D250041E9E6CD50051D778 /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D250031E9E6CD50051D778 /* Dice.swift */; };
 		03D5D6A21E7ACF4300BE7239 /* YesorNo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D5D6A11E7ACF4300BE7239 /* YesorNo.swift */; };
 		03D5D6A41E7ACFF400BE7239 /* roll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D5D6A31E7ACFF400BE7239 /* roll.swift */; };
+		03F818141EB8C6CC001DE8F8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F818131EB8C6CC001DE8F8 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		03D250031E9E6CD50051D778 /* Dice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
 		03D5D6A11E7ACF4300BE7239 /* YesorNo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YesorNo.swift; path = ../YesorNo.swift; sourceTree = "<group>"; };
 		03D5D6A31E7ACFF400BE7239 /* roll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roll.swift; sourceTree = "<group>"; };
+		03F818131EB8C6CC001DE8F8 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				033EE0801EAE416A00F8526C /* setbackCards.swift */,
 				03D5D6A11E7ACF4300BE7239 /* YesorNo.swift */,
 				03A39C821E6D98CC00976A85 /* GameScene.swift */,
+				03F818131EB8C6CC001DE8F8 /* Player.swift */,
 				03BE0ADD1EA8E48E00988359 /* STR.swift */,
 				03BE0ADF1EA8E4A400988359 /* SNEAK.swift */,
 				03A39C861E6D98CC00976A85 /* Main.storyboard */,
@@ -303,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03F818141EB8C6CC001DE8F8 /* Player.swift in Sources */,
 				03BE0AE01EA8E4A400988359 /* SNEAK.swift in Sources */,
 				033EE07F1EAE415900F8526C /* boostCards.swift in Sources */,
 				03A39C831E6D98CC00976A85 /* GameScene.swift in Sources */,
