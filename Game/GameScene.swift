@@ -154,12 +154,12 @@ class GameScene: SKScene {
     var blueSpaces: [SKSpriteNode]?
     var orangeSpaces: [SKSpriteNode]?
     var yellowSpaces: [SKSpriteNode]?
+    let player = Player(strength: 10)
+    var colorSpaces = [Int]()
     
     
     
     override func didMove(to view: SKView) {
-        
-        let player = Player(strength: 10)
         
         
         for node in children {
@@ -1065,37 +1065,58 @@ class GameScene: SKScene {
         orangeSpaces = [space1!, space2!, space5!, space9!, space14!, space18!, space19!, space26!, space29!, space37!, space46!, space49!, space53!, space60!, space61!, space72!, space83!, space91!, space106!]
         yellowSpaces = [space13!, space21!, space33!, space42!, space55!, space57!, space66!, space80!, space94!, space95!, space99!, space110!, space121!, space122!] // THESE GROUPS ARE FOR LATER
         
-        let colorSpaces = [0, -1, -1, 0, 5, -1, 0, -3, 2, -1, 0, 2, 5, -2, -1, 0, -3, 2, -1, -1, 5, -2, 0, 2, 5, 0, -1, -3, 5, -1, 5, 0, 2, -2, -3, 0, 0, -1, 0, 0, 5, 5, -2, -3, 2, 0, -1, 0, 0, -1, 2, -3, 0, -1, 5, -2, 2, -2, -3, 0, -1, -1, 0, 5, 5, 5, -2, 5, 2, 5, -3, 5, -3, -1, 0, 0, -3, -3, 2, 0, -2, -3, -3, -3, -1, 0, 2, 5, 2, 0, -3, 0, -1, -3, -2, -2, -3, 0, -3, -2, 5, 0, 0, -3, 5, 0, 2, -1, 2, -3, -2, -3, 0, -3, -3, -3, -3, 0, -3, 5, -3, -2, -2, -3, -3, 0]
+        colorSpaces = [0, -1, -1, 0, 10, -1, 0, -3, 2, -1, 0, 2, 10, -2, -1, 0, -3, 2, -1, -1, 10, -2, 0, 2, 10, 0, -1, -3, 10, -1, 10, 0, 2, -2, -3, 0, 0, -1, 0, 0, 10, 10, -2, -3, 2, 0, -1, 0, 0, -1, 2, -3, 0, -1, 10, -2, 2, -2, -3, 0, -1, -1, 0, 10, 10, 10, -2, 10, 2, 10, -3, 10, -3, -1, 0, 0, -3, -3, 2, 0, -2, -3, -3, -3, -1, 0, 2, 10, 2, 0, -3, 0, -1, -3, -2, -2, -3, 0, -3, -2, 10, 0, 0, -3, 10, 0, 2, -1, 2, -3, -2, -3, 0, -3, -3, -3, -3, 0, -3, 10, -3, -2, -2, -3, -3, 0]
         
         let moveToStart = SKAction.move(to: ((start1?.position)!), duration: 0)
         player1?.run(moveToStart) // moves player to start
 
 }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) { // this area needs work 
         var moveToNextSpace: SKAction
+        let delay = SKAction.wait(forDuration: 2)
             rollValue6 = mydie.die6! // rolls 1-6 die
             currentPosition += rollValue6! // move player one the number of spaces on the die
-            if (currentPosition >= (spaces?.count)!) {
+        if (currentPosition >= ((spaces?.count)! - 1)) {
                 moveToNextSpace = SKAction.move(to: (spaces?[(spaces?.count)! - 1].position)!, duration: 0.5) // moves player to finish space if the space they are trying to move to is greater than or equal to the finish space
                 currentPosition = (spaces?.count)!
-                print("current position", +currentPosition - 1)
-                print("YOU SHALL NOT PASS!") // this is temporary :D
+                print("tap to lift cup")
+                if (player.strength < 75 && currentPosition == (spaces?.count)!) {
+                    player1?.run(delay)
+                    print("you rolled", +rollValue6!) // prints value of die roll
+                    print("current space", +currentPosition) // prints which space the player is on
+                    print("current strength", +player.strength)
+                    print("you are not strong enough")
+                    moveToNextSpace = SKAction.move(to: (spaces?[(spaces?.count)! - 126].position)!, duration: 0.5)
+                    currentPosition = 0
+                } else if (player.strength >= 75 && currentPosition == (spaces?.count)!) {
+                    player1?.run(delay)
+                    print("you rolled", +rollValue6!) // prints value of die roll
+                    print("current space", +currentPosition) // prints which space the player is on
+                    print("current strength", +player.strength)
+                    print("You successfully lift the cup. Congragulations you win!")
+                } else {
+                    print("you somehow managed to break the game (sneaky)")
+                }
+            
+    
             } else {
                 print("you rolled", +rollValue6!) // prints value of die roll
                 print("current space", +currentPosition) // prints which space the player is on
                 moveToNextSpace = SKAction.move(to: (spaces?[currentPosition].position)!, duration: 0.5)
-                
+                player.strength += colorSpaces[currentPosition]
+                print("current strength", +player.strength)
             }
             player1?.run(moveToNextSpace) // runs action
-        
-        
+}
+
     
         
-        }
-        
+
+
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
         
-    }
+    
+}
 }
