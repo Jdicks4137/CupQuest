@@ -1072,7 +1072,7 @@ class GameScene: SKScene {
 
 }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) { // this area needs work 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         var moveToNextSpace: SKAction
         let delay = SKAction.wait(forDuration: 2)
             rollValue6 = mydie.die6! // rolls 1-6 die
@@ -1080,9 +1080,7 @@ class GameScene: SKScene {
         if (currentPosition >= ((spaces?.count)! - 1)) {
                 moveToNextSpace = SKAction.move(to: (spaces?[(spaces?.count)! - 1].position)!, duration: 0.5) // moves player to finish space if the space they are trying to move to is greater than or equal to the finish space
                 currentPosition = (spaces?.count)!
-                print("tap to lift cup")
                 if (player.strength < 75 && currentPosition == (spaces?.count)!) {
-                    player1?.run(delay)
                     print("you rolled", +rollValue6!) // prints value of die roll
                     print("current space", +currentPosition) // prints which space the player is on
                     print("current strength", +player.strength)
