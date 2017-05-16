@@ -12,6 +12,7 @@ class Dice {
     
     var die6: Int? {
         return Int(arc4random_uniform(6)+1)
+
     }
 
     var die20: Int? {

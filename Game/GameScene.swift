@@ -1058,7 +1058,7 @@ class GameScene: SKScene {
                 
         spaces = [start1!, space1!, space2!, space3!, space4!, space5!, space6!, space7!, space8!, space9!, space10!, space11!, space12!, space13!, space14!, space15!, space16!, space17!, space18!, space19!, space20!, space21!, space22!, space23!, space24!, space25!, space26!, space27!, space28!, space29!, space30!, space31!, space32!, space33!, space34!, space35!, space36!, space37!, space38!, space39!, space40!, space41!, space42!, space43!, space44!, space45!, space46!, space47!, space48!, space49!, space50!, space51!, space52!, space53!, space54!, space55!, space56!, space57!, space58!, space59!, space60!, space61!, space62!, space63!, space64!, space65!, space66!, space67!, space68!, space69!, space70!, space71!, space72!, space73!, space74!, space75!, space76!, space77!, space78!, space79!, space80!, space81!, space82!, space83!, space84!, space85!, space86!, space87!, space88!, space89!, space90!, space91!, space92!, space93!, space94!, space95!, space96!, space97!, space98!, space99!, space100!, space101!, space102!, space103!, space104!, space105!, space106!, space107!, space108!, space109!, space110!, space111!, space112!, space113!, space114!, space115!, space116!, space117!, space118!, space119!, space120!, space121!, space122!, space123!, space124!, finish1!] // list of where player 1 moves to
         
-        colorSpaces = [0, -1, -1, 0, 10, -1, 0, -3, 2, -1, 0, 2, 10, -2, -1, 0, -3, 2, -1, -1, 10, -2, 0, 2, 10, 0, -1, -3, 10, -1, 10, 0, 2, -2, -3, 0, 0, -1, 0, 0, 10, 10, -2, -3, 2, 0, -1, 0, 0, -1, 2, -3, 0, -1, 10, -2, 2, -2, -3, 0, -1, -1, 0, 10, 10, 10, -2, 10, 2, 10, -3, 10, -3, -1, 0, 0, -3, -3, 2, 0, -2, -3, -3, -3, -1, 0, 2, 10, 2, 0, -3, 0, -1, -3, -2, -2, -3, 0, -3, -2, 10, 0, 0, -3, 10, 0, 2, -1, 2, -3, -2, -3, 0, -3, -3, -3, -3, 0, -3, 10, -3, -2, -2, -3, -3, 0]
+        colorSpaces = [0, -1, -1, 0, 10, -1, 0, -3, 0, -1, 0, 0, 10, -2, -1, 0, -3, 0, -1, -1, 10, -2, 0, 0, 10, 0, -1, -3, 10, -1, 10, 0, 0, -2, -3, 0, 0, -1, 0, 0, 10, 10, -2, -3, 0, 0, -1, 0, 0, -1, 0, -3, 0, -1, 10, -2, 0, -2, -3, 0, -1, -1, 0, 10, 10, 10, -2, 10, 0, 10, -3, 10, -3, -1, 0, 0, 10, -3, 0, 0, -2, -3, 10, -3, 10, 0, 0, 10, 0, 0, -3, 0, -1, -3, -2, -2, -3, 0, -3, -2, 10, 0, 0, -3, 10, 0, 0, -1, 0, -3, -2, -3, 0, -3, -3, -3, 10, 0, -3, 10, -3, -2, -2, -3, 10, 0] // values might be off here
                 
             }
             
@@ -1100,12 +1100,68 @@ class GameScene: SKScene {
             
                     
             } else {
-                print("you rolled", +rollValue6!) // prints value of die roll
+                print("you rolled:", +rollValue6!) // prints value of die roll
+                if (spaces?[currentPosition] == space8!) {
+                    currentPosition = 75
+                    print("you jumped to space", +currentPosition)
+                }
+                if (spaces?[currentPosition] == space11!) {
+                    currentPosition = 39
+                    print("you jumped to space", +currentPosition)
+                }
+                if (spaces?[currentPosition] == space17!) {
+                    currentPosition = 38
+                    print("you jumped to space", +currentPosition)
+                }
+                if (spaces?[currentPosition] == space23!) {
+                    currentPosition = 36
+                    print("you jumped to space", +currentPosition)
+                }
+                if (spaces?[currentPosition] == space32!) {
+                    currentPosition = 97
+                    print("you jumped to space", +currentPosition)
+                }
+                if (spaces?[currentPosition] == space44!) {
+                    currentPosition = 89
+                    print("you jumped to space", +currentPosition)
+                }
+                if (spaces?[currentPosition] == space50!) {
+                    currentPosition = 79
+                    print("you jumped to space", +currentPosition)
+                }
+                if (spaces?[currentPosition] == space56!) {
+                    currentPosition = 62
+                    print("you jumped to space", +currentPosition)
+                }
+                if (spaces?[currentPosition] == space68!) {
+                    currentPosition = 74
+                    print("you jumped to space", +currentPosition)
+                }
+                if (spaces?[currentPosition] == space78!) {
+                    currentPosition = 102
+                    print("you jumped to space", +currentPosition)
+                }
+                if (spaces?[currentPosition] == space86!) {
+                    currentPosition = 101
+                    print("you jumped to space", +currentPosition)
+                }
+                if (spaces?[currentPosition] == space88!) {
+                    currentPosition = 97
+                    print("you jumped to space", +currentPosition)
+                }
+                if (spaces?[currentPosition] == space106!) {
+                    currentPosition = 117
+                    print("you jumped to space", +currentPosition)
+                }
+                if (spaces?[currentPosition] == space108!) {
+                    currentPosition = 112
+                    print("you jumped to space", +currentPosition)
+                }
             
-                print("current space", +currentPosition) // prints which space the player is on
+                print("current space:", +currentPosition) // prints which space the player is on
                 moveToNextSpace = SKAction.move(to: (spaces?[currentPosition].position)!, duration: 0.5)
                 player.strength += colorSpaces[currentPosition]
-                print("current strength", +player.strength)
+                print("current strength:", +player.strength)
             }
             player1?.run(moveToNextSpace) // runs action
         
